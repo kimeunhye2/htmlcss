@@ -1,0 +1,35 @@
+.borderimg{
+    border:10px solid transparent;
+    padding: 10px;
+    border-image: url(../imgs/테두리1.png) 30 stretch;
+    margin:30px;
+    text-align: center;
+}
+.borderimg:hover{
+    border-image: url(../imgs/테두리1.png) 30 round;
+}
+.borderimg:active{
+    border-image: url(../imgs/테두리1.png) 50 round;
+}
+
+.borderimg2{
+    border:20px solid transparent;
+    padding: 10px;
+    border-image: url(../imgs/테두리1.png) 30 space;
+    margin:30px;
+    /* border-radius: 30px; */
+}
+.borderimg3{
+    border:10px solid transparent;
+    padding: 10px;
+    border-image:url(../imgs/테두리4.png) 20 round;
+    margin:30px;
+    /* border-radius: 30px; */
+}
+.borderimg4{
+    border:20px solid transparent;
+    padding: 20px;
+    border-image:url(../imgs/테두리3.png) 30 repeat;
+    margin:30px;
+    /* border-radius: 30px; */
+}
