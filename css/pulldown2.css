@@ -8,41 +8,76 @@
 7.동적인 효과 UI기능을 개선
 */
 
-ul a{display: block; padding:10px;}
-ul a{color: white;}
+ul a {
+    display: block;
+    padding: 10px;
+}
+
+ul a {
+    color: white;
+}
 
 
-ul{ width: 800px; margin: auto;
+ul {
+    width: 800px;
+    margin: auto;
 }
-ul>li{ float: left; background:rgb(28, 77, 222);
+
+ul>li {
+    float: left;
+    background: rgb(28, 77, 222);
 }
+
 /* ul{ overflow:hidden;} */
-ol{ 
+ol {
     /* display:none;  */
-    position:absolute;
+    position: absolute;
     visibility: hidden;
     opacity: 0;
 }
-ul>li:hover{background: rgb(28, 77, 222);}
-ul>li:hover>ol{
+
+ul>li:hover {
+    background: rgb(28, 77, 222);
+}
+
+ul>li:hover>ol {
     /* display: block; */
     visibility: visible;
     opacity: 1;
     /* transition:0s; */
 }
+
 /* ol>li{ height: 0; } */
-ol>li>a{ color:black; }
+ol>li>a {
+    color: black;
+}
+
 /* ul>li:hover>ol>li{height: 40px; transition: 0.51s;} */
-ul>li{ position: relative;}
+ul>li {
+    position: relative;
+}
+
 /* ul{height: 100px;} */
-ul::after{ content:''; display: block; clear: both;}
-ol{width: 100%;
-    border-radius: 10px 10px; }
-ol>li:hover{ background-color: rgb(185, 185, 185);
+ul::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+ol {
+    width: 100%;
+    border-radius: 10px 10px;
+}
+
+ol>li:hover {
+    background-color: rgb(185, 185, 185);
 
 }
-ol{ background:  rgb(233, 233, 233);
-border-radius: 10px;}
+
+ol {
+    background: rgb(233, 233, 233);
+    border-radius: 10px;
+}
 
 /* UI기능 개선작업 */
 /* ol>li>a::before{
@@ -53,28 +88,41 @@ border-radius: 10px;}
     position: absolute;
     left:0; top:0;
 } */
-ol>li>a{ position: relative;}
-ol>li>a:hover:before{
-    width:5px; transition: 0s;
-}
-/* 메인메뉴에 hover효과 주기 */
-ul>li>a{
+ol>li>a {
     position: relative;
 }
-ul>li>a::after{
-    content:"";
-    display:block;
-    width:0;
-    position:absolute;
-    left:50%; bottom:0;
-    height: 5px; background: blue;
+
+ol>li>a:hover:before {
+    width: 5px;
+    transition: 0s;
 }
-ul>li>a:hover::after{
+
+/* 메인메뉴에 hover효과 주기 */
+ul>li>a {
+    position: relative;
+}
+
+ul>li>a::after {
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 5px;
+    background: blue;
+}
+
+ul>li>a:hover::after {
     width: 100%;
     transition: 0s;
-    left:0;
+    left: 0;
 }
-#click{ width:10px; height:10px;}
+
+#click {
+    width: 10px;
+    height: 10px;
+}
 
 /* 문제 : 메인메뉴에 라인이 현재 좌측에서 우측으로
 width가 0> 100%로 커지고 있다. 기획안 변경
