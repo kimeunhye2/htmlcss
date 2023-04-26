@@ -6,39 +6,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>0426</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/gradient.css">
+    <title>모바일</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0; 
+        }
+
+        ul {
+            list-style: none;   
+        }
+
+        ul#icon>li {
+            width: 25%;
+            height: 96px;
+            cursor: pointer;
+            float: left;
+        }
+
+        ul#icon_list>li>a {
+            display: block;
+            width: 75px;
+            height: 81px;
+            margin: auto;
+            font: 12px Helvetica;
+            text-decoration: none;
+            padding-top: 15px;
+            color: #222;
+        }
+
+        span.icon {
+            display: block;
+            width: 56px;
+            height: 56px;
+            background: url(../htmlcss/imgs/모바일1.png) no-repeat;
+            margin: auto;
+        }
+
+        #icon_list>li>a>span.txt {
+            display: block;
+            width: auto;
+            text-align: center;
+            padding-top: 5px;
+        }
+
+        :root {
+            --width: -50px;
+            --height: - 75px;
+        }
+
+        ul#icon_list #icon1 {
+            background-position: 0 0;
+        }
+
+        ul#icon_list #icon2 {
+            background-position: var(--width) 0;
+        }
+
+        ul#icon_list #icon3 {
+            background-position: calc(var(--width) * 2) 0;
+        }
+
+        ul#icon_list #icon4 {
+            background-position: calc(var(--width) * 3) 0;
+        }
+
+        ul#icon_list #icon5 {
+            background-position: 0 var(--height);
+        }
+
+        ul#icon_list #icon6 {
+            background-position: var(--width) var(--height);
+        }
+
+        ul#icon_list #icon7 {
+            background-position: calc(var(--width) *2)var(--height);
+        }
+
+        ul#icon_list #icon8 {
+            background-position: calc(var(--width) *3)var(--height);
+        }
+    </style>
 </head>
 
 <body>
-<h1> 그라디언트 </h1>
-<div class="wrap">
-   <div class="grad1">grad1</div>
-   <div class="grad2">grad2</div>
-   <div class="grad3">grad3</div>
-   <div class="grad4">grad4</div>
-   <div class="grad5">grad5</div>
-   <div class="grad6">grad6</div>
-   <div class="grad7">grad7</div>
-   <div class="grad8">grad8</div>
-   <div class="grad9">grad9</div>
-   <div class="grad10">grad10</div>
-   <div class="grad11">grad11</div>
-   <div class="grad12">grad12</div>
-   <div class="grad13">grad13</div>
-   <div class="grad14">grad14</div>
-   <div class="grad15">grad15</div>
-
-
-
-
-
-
-
-</div>
-<h1> 글자에 그라디언트</h1>
-<h2> 테두리에 그라디언트 </h2>
+    <h1>모바일 아이콘 만들기</h1>
+    <ul id="icon_list">
+        <li><a href="#"><span class="icon" id="icon1"></span><span class="txt">전화걸기</span></a></li>
+        <li><a href="#"><span class="icon" id="icon2"></span><span class="txt">트위터</span></a></li>
+        <li><a href="#"><span class="icon" id="icon3"></span><span class="txt">페이스북</span></a></li>
+        <li><a href="#"><span class="icon" id="icon4"></span><span class="txt">메일</span></a></li>
+        <li><a href="#"><span class="icon" id="icon5"></span><span class="txt">RCS</span></a></li>
+        <li><a href="#"><span class="icon" id="icon6"></span><span class="txt">음악</span></a></li>
+        <li><a href="#"><span class="icon" id="icon7"></span><span class="txt">검색</span></a></li>
+        <li><a href="#"><span class="icon" id="icon8"></span><span class="txt">홈</span></a></li>
+    </ul>
 </body>
 
 </html>
