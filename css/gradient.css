@@ -53,7 +53,7 @@ furthest-corner 가장 먼 코너 */
     background: radial-gradient(circle closest-side at 30% 40% , white,gold,  green);
 }
 .grad9{
-    background: radial-gradient(circle furthest-corner at 30% 40% , white,gold,  green);
+    background: radial-gradient(circle furthest-corner at 30% 40% , white, gold,  green);
 }
 .grad10{
     background: radial-gradient(red,yellow 20%, blue);
@@ -79,4 +79,5 @@ h1{
 
 border: 20px solid red;
 border-image: linear-gradient(gold 0%, silver 50%, red 100%) 20 stretch;
+-webkit-text-stroke: 5px black;
 }
