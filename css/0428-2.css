@@ -19,7 +19,7 @@ footer {
 }
 
 /* 태블릿 */
-@media (min-width: 768px) and ( max-width:1270px) {
+@media screen and (min-width:768px) and (max-width:1279px) {
     section {
         display: flex;
         flex-wrap: wrap;
@@ -29,31 +29,34 @@ footer {
     section div {
         flex: 2 1 40%;
     }
-
-
 }
 
 /* pc */
-@media (min-width: 1280px) {
+@media screen and (min-width:1280px) {
+    .wrap {
+        width: 1280px;
+        margin: auto;
+    }
+
     section {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
 
-    .wrap section>div{
+    .wrap section>div {
+        width:32%;
         /* flex: 1 1 32%; */
-        width: 32%;
+        /* width:100px !important; */
     }
 
-    section div:nth-child(4){
-        /* flex: 2 2 0; */
-        width:400px;
-        /* flex: 2 2 0; */
+    section>div:nth-child(4) {
+        /* flex: 2 1 20%; */
     }
-    section div:nth-child(5){
-        flex: 2 2 0;
-}
 
+    section div:nth-child(5) {
+       /* flex:1 1 60%; */
+       flex: 2 2 0;
+    }
 
 }
