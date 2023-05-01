@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/0501-2.css">
+</head>
+<body>
+    <div class="header_sec02">
+        <nav class="gnb01">
+            <ul class="flex_center depth01">
+                <li>
+                    <a href="/company/ceo">회사소개</a>
+                    <ul class="depth02">
+                        <li><a href="/company/ceo">CEO인사말</a></li>
+                        <li><a href="/company/philosophy">경영이념</a></li>
+                        <li><a href="/company/business">사업분야</a></li>
+                        <li><a href="/company/history">히스토리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/product/list">제품소개</a>
+                    <!-- <a href="javascript:alert('준비중입니다')">제품소개</a> -->
+                    <ul class="depth02">
+                        <li>
+                            <a href="/product/list?type=1">아이스크림</a>
+                            <!-- <a href="javascript:alert('준비중입니다')" th:text="${item.CAT_NAME}"></a> -->
+                        </li>
+                        <li>
+                            <a href="/product/list?type=2">우유/치즈</a>
+                            <!-- <a href="javascript:alert('준비중입니다')" th:text="${item.CAT_NAME}"></a> -->
+                        </li>
+                        <li>
+                            <a href="/product/list?type=3">발효유</a>
+                            <!-- <a href="javascript:alert('준비중입니다')" th:text="${item.CAT_NAME}"></a> -->
+                        </li>
+                        <li>
+                            <a href="/product/list?type=4">커피</a>
+                            <!-- <a href="javascript:alert('준비중입니다')" th:text="${item.CAT_NAME}"></a> -->
+                        </li>
+                        <li>
+                            <a href="/product/list?type=10">주스</a>
+                            <!-- <a href="javascript:alert('준비중입니다')" th:text="${item.CAT_NAME}"></a> -->
+                        </li>
+                        <li>
+                            <a href="/product/list?type=9">음료</a>
+                            <!-- <a href="javascript:alert('준비중입니다')" th:text="${item.CAT_NAME}"></a> -->
+                        </li>
+                        <li>
+                            <a href="/product/list?type=5">스낵/디저트</a>
+                            <!-- <a href="javascript:alert('준비중입니다')" th:text="${item.CAT_NAME}"></a> -->
+                        </li>
+                        <li>
+                            <a href="/product/list?type=11">건강지향</a>
+                            <!-- <a href="javascript:alert('준비중입니다')" th:text="${item.CAT_NAME}"></a> -->
+                        </li>
+                        <li>
+                            <a href="/product/list?type=7">수출제품</a>
+                            <!-- <a href="javascript:alert('준비중입니다')" th:text="${item.CAT_NAME}"></a> -->
+                        </li>
+
+<!--                                    <li th:class="${#httpServletRequest.getQueryString() == 'type=icecream' } ? 'active'"><a href="/product/list?type=icecream">아이스크림</a></li>-->
+<!--                                    <li th:class="${#httpServletRequest.getQueryString() == 'type=milk' } ? 'active'"><a href="/product/list?type=milk">우유/치즈</a></li>-->
+<!--                                    <li th:class="${#httpServletRequest.getQueryString() == 'type=yogurt' } ? 'active'"><a href="/product/list?type=yogurt">발효유</a></li>-->
+<!--                                    <li th:class="${#httpServletRequest.getQueryString() == 'type=coffee' } ? 'active'"><a href="/product/list?type=coffee">커피</a></li>-->
+<!--                                    <li th:class="${#httpServletRequest.getQueryString() == 'type=juice' } ? 'active'"><a href="/product/list?type=juice">주스</a></li>-->
+<!--                                    <li th:class="${#httpServletRequest.getQueryString() == 'type=beverage' } ? 'active'"><a href="/product/list?type=beverage">음료</a></li>-->
+<!--                                    <li th:class="${#httpServletRequest.getQueryString() == 'type=snack' } ? 'active'"><a href="/product/list?type=snack">스낵/디저트</a></li>-->
+<!--                                    <li th:class="${#httpServletRequest.getQueryString() == 'type=health' } ? 'active'"><a href="/product/list?type=health">건강지향식품</a></li>-->
+<!--                                    <li th:class="${#httpServletRequest.getQueryString() == 'type=export' } ? 'active'"><a href="/product/list?type=export">수출제품</a></li>-->
+                    </ul>
+                </li>
+                <li>
+                    <a href="/esg/esg">지속가능경영</a>
+                    <ul class="depth02">
+                        <li><a href="/esg/esg">지속가능경영 체계</a></li>
+                        <li><a href="/esg/eco">Eco-Friendly</a></li>
+                        <li><a href="/esg/value">Shared Value</a></li>
+                        <li><a href="/esg/global">Global Integrity</a></li>
+                        <li><a href="/esg/ethics">윤리준법경영</a></li>
+                        <li><a href="/esg/contribution">사회공헌</a></li>
+                        <li><a href="/esg/reports">보고서 및 정책</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/investment/invest_finance">투자정보</a>
+                    <ul class="depth02">
+                        <li><a href="/investment/invest_finance">재무정보</a></li>
+                        <li><a href="/investment/stocks">주식정보</a></li>
+                        <li><a href="/investment/invest_announce">전자공고</a></li>
+                        <li><a href="/investment/invest_public">공시정보</a></li>
+                        <li><a href="/investment/ir">IR자료실</a></li>
+                    </ul>
+                </li>
+                <li>
+                     <a href="/news/news_home">뉴스룸</a>
+                    <ul class="depth02">
+                        <li><a href="/news/news_new">새소식</a></li>
+                        <li><a href="/news/news_announced">보도자료</a></li>
+                        <li><a href="/news/news_story">빙그레 스토리</a></li>
+                        <li><a href="/news/media" style="white-space: normal; word-break: keep-all;">미디어 라이브러리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/center/service">고객센터</a>
+                    <ul class="depth02">
+                        <li><a href="/center/service">고객상담</a></li>
+                        <li><a href="/center/supply?prod_cat_idx=1">제품공급문의</a></li>
+                        <!-- <li th:class="${#httpServletRequest.requestURI.contains('supply')} ? 'active'"><a href="javascript:alert('준비중입니다')">제품공급문의</a></li> -->
+                        <li><a href="/center/cyber">사이버 부정신고</a></li>
+                        <li><a href="/center/safe">안전신문고</a></li>
+                        <li><a href="/support/privacy">개인정보처리방침</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

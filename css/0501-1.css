@@ -1,0 +1,45 @@
+.category{
+    display:flex;
+    float:left;
+    border:5px solid red;
+    padding: 5px;
+    margin:10px;
+    width: 600px;
+    height: 500px;
+    position: relative;
+
+
+}
+
+.tab{
+    /* font-size: 2px; */
+    position: absolute;
+    justify-content: center;
+
+}
+div>h3{
+    font-size: 5px;
+    color: blue;
+    /* align-items: center; */
+    text-align: center;
+    padding: 10px;  
+    position: absolute;
+    top: 50px;
+    
+}
+div>ul{
+    padding: 5px;
+}
+div{
+    margin: auto;
+}
+ul>li{
+    font-size: 2px;
+    margin: auto;
+    /* align-items: center; */
+    padding: 5px;
+    width: 75px;
+    /* float:left; */
+}
+
+
