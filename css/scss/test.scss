@@ -1,237 +1,304 @@
 //변수선언
 $color : red;
-$margin:5px;
-$title-color:blue;
+$margin: 5px;
+$title-color: blue;
 
-#box1{
+#box1 {
     color: $color;
 }
 
-#box2{
-     margin:$margin;
+#box2 {
+    margin: $margin;
 }
-h1{
-    color:$title-color;
+
+h1 {
+    color: $title-color;
 }
+
 //네스팅기법 nesting
-$font-size:16px;
-$font-family:serif;
-body{
-    color:$title-color;
+$font-size: 16px;
+$font-family: serif;
+
+body {
+    color: $title-color;
+
     font: {
-        size:$font-size;
-        family:$font-family;
+        size: $font-size;
+        family: $font-family;
     }
 }
-ul{
-    font-size:20px;
+
+ul {
+    font-size: 20px;
     background: silver;
-    a{
-        color:red;
+
+    a {
+        color: red;
     }
 }
+
 //& -> 자기 자신요소
-ul{
-    &>li{
+ul {
+    &>li {
         border: 3px solid;
-        margin:10px;
+        margin: 10px;
     }
-    &{ border:5px solid red;}
+
+    & {
+        border: 5px solid red;
+    }
 }
-$top:30px;
-ul{
-    &>li{
-        border:3px solid black;
-        margin:$top;
-        &:hover{
+
+$top: 30px;
+
+ul {
+    &>li {
+        border: 3px solid black;
+        margin: $top;
+
+        &:hover {
             background: gold;
         }
     }
-    &{
+
+    & {
         box-sizing: border-box;
     }
 }
 
-#box1{
-    &,&-title{
+#box1 {
+
+    &,
+    &-title {
         padding: 10px;
     }
 }
-#box1 #box2{
+
+#box1 #box2 {
     font-size: 20px;
-    &>a{
+
+    &>a {
         color: red;
-        &:hover{
-            color:blue;
+
+        &:hover {
+            color: blue;
         }
     }
 }
-.box1{
-    .box2{
-        .box3{
+
+.box1 {
+    .box2 {
+        .box3 {
             padding: 20px;
             background: lavender;
         }
     }
 }
-.box1{
-    .box2 .box3{ padding:40px; color: red;}
+
+.box1 {
+    .box2 .box3 {
+        padding: 40px;
+        color: red;
+    }
 }
 
 //media 쿼리
-#box1{
-    @media screen and (max-width: 780px){
-            font-size:30px;
-            width: 50%;
-    }
-}
-@media screen and (max-width:780px){
-    #box1{
+#box1 {
+    @media screen and (max-width: 780px) {
         font-size: 30px;
         width: 50%;
     }
 }
-div.box{
-    &:hover{
-        @media screen and (min-width:500px){
+
+@media screen and (max-width:780px) {
+    #box1 {
+        font-size: 30px;
+        width: 50%;
+    }
+}
+
+div.box {
+    &:hover {
+        @media screen and (min-width:500px) {
             background: blue;
         }
     }
 }
+
 // @mixin 함수, include 함수명
-@mixin test{
+@mixin test {
     width: 100px;
     height: 100px;
     border: 1px solid red;
 }
-div{
+
+div {
     @include test()
 }
-p{
+
+p {
     float: left;
     @include test ();
 }
-@mixin clear{
-    &:after{
-        content:'';
+
+@mixin clear {
+    &:after {
+        content: '';
         display: block;
         clear: both;
     }
 }
-div{
+
+div {
     @include clear();
 }
-$border-color:blue;
-@mixin border($border-color){
-    border:1px solid $border-color;
+
+$border-color: blue;
+
+@mixin border($border-color) {
+    border: 1px solid $border-color;
 }
 
-span{@include border($border-color)}
- 
-span{@include border(red)}
+span {
+    @include border($border-color)
+}
 
-@mixin box($w,$h){
+span {
+    @include border(red)
+}
+
+@mixin box($w, $h) {
     width: $w;
     height: $h;
 }
-header{
-    @include box(10,100);
+
+header {
+    @include box(10, 100);
     border: 3px;
 }
-@mixin pBox($w, $h, $b){
-    width:if(unitless($w),#{$w}px,$w);
-    height: if(unitless($h),#{$h}px,$h);
-    border-radius: if(unitless($b),#{$b}px,$b);
+
+@mixin pBox($w, $h, $b) {
+    width:if(unitless($w), #{$w}px, $w);
+    height: if(unitless($h), #{$h}px, $h);
+    border-radius: if(unitless($b), #{$b}px, $b);
 }
-.box1{
+
+.box1 {
     @include pBox(10, 100, 1000)
 }
-.box2{
+
+.box2 {
     @include pBox(10px, 100px, 1000px)
 }
 
 //@extend
-%name{
+%name {
     font-size: 16px;
-    color:blue;
+    color: blue;
 }
-%name2{
+
+%name2 {
     font-weight: bold;
     background-color: gray;
 }
-@mixin name($bold,$color){
+
+@mixin name($bold, $color) {
     font-weight: $bold;
     background-color: $color
 }
-.a{
+
+.a {
     @extend %name;
-    @include name(bold,gray );
+    @include name(bold, gray);
 }
-.b{
-    @extend %name; @extend %name2;
-    @include name(bold,gray );
+
+.b {
+    @extend %name;
+    @extend %name2;
+    @include name(bold, gray);
 }
-.c{
+
+.c {
     @extend %name;
 }
-.fs30{
+
+.fs30 {
     font-size: 30px;
 }
-.fw{
+
+.fw {
     font-weight: bold;
 }
-.z{
-    @extend.fs30, .fw;
+
+.z {
+    @extend.fs30,
+    .fw;
 }
-%mauto{
+
+%mauto {
     width: 1200px;
     margin: auto;
 }
-footer{
-    div{
-        @extend %mauto;
-    }
-}
-.main{
-    div{
+
+footer {
+    div {
         @extend %mauto;
     }
 }
 
-//반복문
-@for $i from 1 through 5{
-    div:nth-child{#($1)}{
-        font-size: 10px *$i
-    }
-}
-//{   } 보간문자
-@each $var in book, zoom, phone{
-    .ico_#{$var}{
-        background:url(img/#($var)png);
+.main {
+    div {
+        @extend %mauto;
     }
 }
 
-$heading:(h1:38px, h2:20px, h3:15px);
-@each $a, $b in $heading{
-    #{5a}{
-        font-size:$b
+// 반복문
+@for $i from 1 through 5 {
+    div:nth-child(#{$i}) {
+        font-size: 10px * $i;
     }
 }
 
-//조건문
-@mixin btn_radius($h, $radius:true){
+// {  } 보간문자
+@each $var in book,
+zoom,
+phone {
+    .ico_#{$var} {
+        background:url(imgs/#{$var}.png);
+    }
+}
+
+$heading: (
+    h1:30px,
+    h2:20px,
+    h3:15px
+);
+
+@each $a,
+$b in $heading {
+    #{$a} {
+        font-size: $b;
+    }
+}
+
+// 조건문
+@mixin btn_radius($h, $radius: true) {
     height: $h;
     line-height: $h;
-    @if $radius{
-        border-radius: $h /2;
 
-    }@else{
-        border:3px solid red;
+    @if $radius {
+        border-radius: $h / 2;
+    }
+
+    @else {
+        border: 3px solid red;
     }
 }
-.btn{
-    @include btn_radius(30px);
+
+.btn {
+    @include btn_radius(30px, true)
 }
-.btn{
-    @include btn_radius(30px,false)
+
+.btn {
+    @include btn_radius(30px, false)
 }
