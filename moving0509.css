@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+div .navbar{
+    display: flex;
+    position: absolute;
+    right: 150px;
+    top: 30px;
+    padding: 50px 0;
+    font-size: 20px;
+    text-align: center;
+    width: 500px;
+    z-index: 99;
+
+}
+.moon{
+    width: 300px;
+    padding: 40px;
+    margin-left: 50px;
+}
+.main{padding: 10px;
+    margin: 0;
+}
+
+
+div li{
+    visibility: hidden;
+    opacity: 0;
+    width: 150px;
+    padding: 5px;
+
+
+    
+    /* position: absolute; */
+}
+
+div>ul:hover{
+   background: lightblue;
+
+
+    
+    /* position: absolute; */
+}
+
+ul:hover>li{
+    visibility: visible;
+    opacity: 1;
+    transition: all 1s;
+
+}
+.navbar>div>li:hover{
+  
+    background-color: lightgray;
+}
+
+ul>li{
+    background: pink;
+}
+.main:hover{
+}
+li:hover{
+    background-color: gray;
+}
+
+.swiper {
+    width: 900px;
+    height: 400px;
+  }
+  .notice{
+    margin:50px;
+    position: absolute;
+    
+  }
+  .notice h2{
+    position: relative;
+    left: 200px;
+    top:-20px;
+    color: gray;
+  }
+  td{
+    padding: 1px;
+  }
+  tr:nth-of-type(2){
+    background: lightgray;
+  }
+  tr:nth-of-type(4){
+    background: lightgray;
+  }
+  .partner{
+    position: absolute;
+    right: 150px;
+    bottom: 180px;
+  }
+  .pic1{
+    width: 200px;
+    right: 50px;
+    position: absolute;
+    display: inline-block
+  }
+  .dog{
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+  }
